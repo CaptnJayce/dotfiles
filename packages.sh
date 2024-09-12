@@ -5,9 +5,10 @@
 
 
 # pacman packages
-pacman -S flatpak curl yay hyprland hyprpaper neovim discord qtcreator
+pacman -S flatpak curl yay hyprland hyprpaper neovim discord qtcreator git gcc raylib yazi fastfetch lua nodejs npm sddm ttf-jetbrains-mono-nerd 
 
-yay -S spotify hyprshot --noconfirm
+# packages that can't be installed via pacman 
+yay -S spotify hyprshot waybar-git --noconfirm
 
 # flatpaks
 flatpak install flathub com.ultimaker.cura
