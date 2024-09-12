@@ -15,6 +15,6 @@ export HYPRSHOT_DIR="/home/captnjayce/Pictures/screenshots"
 export PATH=$PATH:/home/captnjayce/.local/bin
 
 fastfetch
-eval "$(oh-my-posh init bash)"
+eval "$(oh-my-posh init bash --config ~/dotfiles/.config/oh-my-posh/config.omp.json)"
 
 . "$HOME/.cargo/env"
