@@ -1,0 +1,83 @@
+@define-color accent #32302f;
+@define-color text #ffffff;
+@define-color invText #f8f8f8;
+/* text when background is accent */
+@define-color bg #cc241d;
+
+/* @import "./wal.css";
+@define-color accent @color5;
+@define-color bg @background;
+@define-color text @foreground; */
+
+/*
+@import "./base16-default-dark.css";
+
+@define-color accent @base01;
+@define-color text @base07;
+@define-color invText @base07;
+@define-color bg @base00;
+*/
+
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 12px;
+  border-radius: 0px;
+  min-height: 0px;
+}
+
+window#waybar {
+  background-color: @accent;
+  color: @text;
+  opacity: 0.95;
+}
+
+#workspaces {
+  margin: 0px 1px 0px 1px;
+}
+
+#workspaces button {
+  padding: 0 5px;
+	color: @text;
+}
+
+#workspaces button.active {
+  background-color: @bg;
+  color: @invText;
+  /* color: @background; */
+}
+
+#pulseaudio{
+  margin: 0px 6px 0px 6px;
+}
+#clock{
+  margin: 0px 6px 0px 6px;
+}
+#custom-icon {
+  background-color: transparent;
+  color: @text;
+  margin: 0px;
+}
+#custom-spotify{
+  margin: 0px 6px 0px 6px;
+}
+
+.modules-left {
+  padding: 0px 0px 0px 0px;
+}
+
+.modules-center {
+  padding: 0px 0px 0px 0px;
+}
+
+.modules-right {
+  padding: 0px 0px 0px 0px;
+}
+
+#window {
+  color: @invText;
+  background-color: @accent;
+  padding-left: 4px;
+}
+
+
+

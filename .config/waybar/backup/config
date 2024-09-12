@@ -1,0 +1,32 @@
+{
+    "spacing": 4,
+	"height":22,
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["clock#time", "clock#date"],
+    "modules-left": ["pulseaudio", "custom/spotify"],
+
+    "clock#time": {
+       "format": "[time: {:%H:%M}]"
+    },
+    
+    "clock#date": {
+        "format": "[date: {:%Y-%m-%d}]"
+    },
+
+    "pulseaudio": {
+        "format": "[volume: {volume}%]",
+        "format-muted": "[volume: muted]",
+        "on-click": "pavucontrol"
+    },
+
+    "custom/spotify": {
+        "exec": "/usr/bin/python3 /home/captnjayce/.config/waybar/mediaplayer.py --player spotify",
+        "format": "{}",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    }
+}
+
+
