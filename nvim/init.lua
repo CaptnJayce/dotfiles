@@ -1,1 +1,0 @@
-/home/captnjayce/.config/nvim/init.lua
