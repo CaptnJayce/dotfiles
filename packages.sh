@@ -7,8 +7,7 @@
 # pacman packages
 pacman -S flatpak curl yay hyprland hyprpaper neovim discord qtcreator
 
-# couldnt get spotify to install with pacman for some reason :/
-yay -S spotify --noconfirm
+yay -S spotify hyprshot --noconfirm
 
 # flatpaks
 flatpak install flathub com.ultimaker.cura
