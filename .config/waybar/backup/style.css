@@ -21,7 +21,6 @@
 * {
   font-family: JetBrainsMono Nerd Font;
   font-size: 12px;
-  border-radius: 0px;
   min-height: 0px;
 }
 
@@ -29,6 +28,7 @@ window#waybar {
   background-color: @accent;
   color: @text;
   opacity: 0.95;
+  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
 }
 
 #workspaces {
@@ -37,10 +37,11 @@ window#waybar {
 
 #workspaces button {
   padding: 0 5px;
-	color: @text;
+  color: @text;
 }
 
 #workspaces button.active {
+  margin-bottom: 3px;
   background-color: @bg;
   color: @invText;
   /* color: @background; */

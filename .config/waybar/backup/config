@@ -1,21 +1,26 @@
 {
     "spacing": 4,
 	"height":22,
-    "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["clock#time", "clock#date"],
     "modules-left": ["pulseaudio", "custom/spotify"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["custom/timer", "clock#time", "clock#date", "clock#day"],
 
     "clock#time": {
-       "format": "[time: {:%H:%M}]"
+       "interval": 1,
+       "format": "{:%H:%M:%S}"
     },
     
     "clock#date": {
-        "format": "[date: {:%Y-%m-%d}]"
+        "format": "{:%Y-%m-%d}"
+    },
+
+    "clock#day": {
+       "format": "{:%a}" 
     },
 
     "pulseaudio": {
-        "format": "[volume: {volume}%]",
-        "format-muted": "[volume: muted]",
+        "format": "volume: {volume}%",
+        "format-muted": "volume: muted",
         "on-click": "pavucontrol"
     },
 
@@ -28,5 +33,6 @@
         "on-scroll-down": "playerctl previous"
     }
 }
+
 
 
