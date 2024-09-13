@@ -1,9 +1,7 @@
 {
-    "spacing": 4,
-	"height":22,
-    "modules-left": ["pulseaudio", "custom/spotify"],
-    "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["custom/timer", "clock#time", "clock#date", "clock#day"],
+	"height": 30,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-right": ["custom/spotify", "pulseaudio", "network", "battery", "custom/timer", "clock#time", "clock#date", "clock#day"],
 
     "clock#time": {
        "interval": 1,
@@ -31,6 +29,28 @@
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous"
+    },
+
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "network": {
+        "interval": 5,
+        "format-wifi": "  WiFi", // Icon: wifi
+        "format-ethernet": " Ethernet", // Icon: ethernet
+        "format-disconnected": "⚠ Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "on-click": "kitty nmtui"
     }
 }
 

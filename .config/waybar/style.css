@@ -1,83 +1,47 @@
-@define-color accent #32302f;
-@define-color text #ffffff;
-@define-color invText #f8f8f8;
-/* text when background is accent */
-@define-color bg #cc241d;
-
-/* @import "./wal.css";
-@define-color accent @color5;
-@define-color bg @background;
-@define-color text @foreground; */
-
-/*
-@import "./base16-default-dark.css";
-
-@define-color accent @base01;
-@define-color text @base07;
-@define-color invText @base07;
-@define-color bg @base00;
-*/
-
 * {
-  font-family: JetBrainsMono Nerd Font;
+  all: unset;
+  border: none;
+  border-radius: 4;
   font-size: 12px;
-  min-height: 0px;
+  min-height: 0;
+  font-family: JetBrainsMono Nerd Font;
+  margin: 0px 0px 1px 0px;
 }
 
 window#waybar {
-  background-color: @accent;
-  color: @text;
+  background-color: #32302f; 
   opacity: 0.95;
   border-bottom: 3px solid rgba(100, 114, 125, 0.5);
 }
 
-#workspaces {
-  margin: 0px 1px 0px 1px;
-}
-
 #workspaces button {
-  padding: 0 5px;
-  color: @text;
+    padding: 0px 10px 0px 10px;
+    background-color: transparent;
 }
 
 #workspaces button.active {
-  margin-bottom: 3px;
-  background-color: @bg;
-  color: @invText;
-  /* color: @background; */
+  background-color: #ffffff;
+  color: #32302f; 
+}
+
+#custom-spotify{
+  padding: 0px 10px 0px 10px;
+  background-color: @music;
 }
 
 #pulseaudio{
-  margin: 0px 6px 0px 6px;
+  padding: 0px 10px 0px 10px;
+  background-color: @volume;
 }
+
+#network {
+  padding: 0px 10px 0px 10px;
+  background-color: @internet;
+}
+
 #clock{
-  margin: 0px 6px 0px 6px;
-}
-#custom-icon {
-  background-color: transparent;
-  color: @text;
-  margin: 0px;
-}
-#custom-spotify{
-  margin: 0px 6px 0px 6px;
-}
-
-.modules-left {
-  padding: 0px 0px 0px 0px;
-}
-
-.modules-center {
-  padding: 0px 0px 0px 0px;
-}
-
-.modules-right {
-  padding: 0px 0px 0px 0px;
-}
-
-#window {
-  color: @invText;
-  background-color: @accent;
-  padding-left: 4px;
+  padding: 0px 10px 0px 10px;
+  background-color: @datetime;
 }
 
 
