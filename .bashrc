@@ -17,4 +17,3 @@ export PATH=$PATH:/home/captnjayce/.local/bin
 fastfetch
 eval "$(oh-my-posh init bash --config ~/dotfiles/.config/oh-my-posh/config.omp.json)"
 
-. "$HOME/.cargo/env"
