@@ -26,22 +26,22 @@ window#waybar {
 
 #custom-spotify{
   padding: 0px 10px 0px 10px;
-  background-color: @music;
 }
 
 #pulseaudio{
   padding: 0px 10px 0px 10px;
-  background-color: @volume;
 }
 
 #network {
   padding: 0px 10px 0px 10px;
-  background-color: @internet;
+}
+
+#battery {
+  padding: 0px 10px 0px 10px;
 }
 
 #clock{
   padding: 0px 10px 0px 10px;
-  background-color: @datetime;
 }
 
 
