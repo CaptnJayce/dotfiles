@@ -43,7 +43,7 @@
         "type": "command",
         "shell": "/bin/sh",
         "key": "age   ",
-        "text": "/home/captnjayce/Dev/Bash/sys_age.sh",
+        "text": "~/dotfiles/system_age.sh",
         "keyColor": "blue"
     },
     {
