@@ -5,7 +5,7 @@
 
 
 # pacman packages
-pacman -S stow kitty flatpak curl yay hyprland hyprpaper neovim discord qtcreator git gcc raylib yazi fastfetch lua nodejs npm sddm ttf-jetbrains-mono-nerd 
+pacman -S wofi stow kitty flatpak curl yay hyprland hyprpaper neovim discord qtcreator git gcc raylib yazi fastfetch lua nodejs npm sddm ttf-jetbrains-mono-nerd 
 
 # packages that can't be installed via pacman 
 yay -S spotify hyprshot waybar-git --noconfirm
