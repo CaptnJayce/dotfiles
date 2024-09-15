@@ -4,19 +4,20 @@
   border-radius: 4;
   font-size: 12px;
   min-height: 0;
-  font-family: JetBrainsMono Nerd Font;
-  margin: 0px 0px 1px 0px;
+  font-family: HackNerdFont;
 }
 
 window#waybar {
   background-color: #32302f; 
   opacity: 0.95;
-  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+  border-bottom: 2px solid rgba(224, 236, 248, 255);
+  color: rgba(224, 236, 248, 255);
 }
 
 #workspaces button {
     padding: 0px 10px 0px 10px;
     background-color: transparent;
+  margin: 0px 0px 2px 0px;
 }
 
 #workspaces button.active {
@@ -26,22 +27,27 @@ window#waybar {
 
 #custom-spotify{
   padding: 0px 10px 0px 10px;
+  margin-bottom: 2px;
 }
 
 #pulseaudio{
   padding: 0px 10px 0px 10px;
+  margin-bottom: 2px;
 }
 
 #network {
   padding: 0px 10px 0px 10px;
+  margin-bottom: 2px;
 }
 
 #battery {
   padding: 0px 10px 0px 10px;
+  margin-bottom: 2px;
 }
 
 #clock{
   padding: 0px 10px 0px 10px;
+  margin-bottom: 2px;
 }
 
 
