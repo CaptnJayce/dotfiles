@@ -8,8 +8,8 @@
 }
 
 window#waybar {
-  background-color: #32302f; 
-  opacity: 0.95;
+  background-color: #191724; 
+  /* opacity: 0.95; */
   border-bottom: 2px solid rgba(224, 236, 248, 255);
   color: rgba(224, 236, 248, 255);
 }

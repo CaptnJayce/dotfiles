@@ -46,7 +46,9 @@ require("lazy").setup({
                 vim.cmd([[colorscheme gruvbox-flat]])
             end,
         },
-
+        {
+            "rose-pine/neovim", name = "rose-pine"
+        },
         {
             'stevearc/conform.nvim',
             event = { "BufReadPre", "BufNewFile" },
@@ -229,4 +231,4 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>t', '<Cmd>Neotree toggle<CR>')
 
-vim.cmd.colorscheme "gruvbox-flat"
+vim.cmd.colorscheme "rose-pine"
