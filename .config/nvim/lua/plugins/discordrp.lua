@@ -7,6 +7,10 @@ return {
       editor = {
         tooltip = ":Wq :WQ :wQ :W :wWQ :WqQ :wq",
       },
-    }, -- calls require('cord').setup()
+      text = {
+        editing = "rawdogging {}",
+        workspace = "in /{}",
+      },
+    },
   },
 }
