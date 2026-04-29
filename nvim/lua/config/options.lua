@@ -3,7 +3,7 @@ local opt = vim.opt
 -- Tabs (Casey's preference)
 opt.tabstop = 4
 opt.shiftwidth = 4
-opt.expandtab = false  -- real tabs
+opt.expandtab = true
 
 -- UI
 opt.number = true
@@ -44,3 +44,4 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.expandtab = true
 	end,
 })
+

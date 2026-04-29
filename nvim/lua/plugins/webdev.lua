@@ -2,9 +2,34 @@ return {
 	-- Auto-close and rename HTML/JSX/TSX tags
 	{
 		"windwp/nvim-ts-autotag",
-		ft = { "html", "javascript", "javascriptreact", "typescript", "typescriptreact", "svelte", "vue", "xml" },
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		event = "VeryLazy",
 		config = function()
 			require("nvim-ts-autotag").setup()
+		end,
+	},
+
+	-- Format on save
+	{
+		"stevearc/conform.nvim",
+		event = "BufWritePre",
+		config = function()
+			require("conform").setup({
+				formatters_by_ft = {
+					javascript      = { "prettier" },
+					javascriptreact = { "prettier" },
+					typescript      = { "prettier" },
+					typescriptreact = { "prettier" },
+					html            = { "prettier" },
+					css             = { "prettier" },
+					json            = { "prettier" },
+					yaml            = { "prettier" },
+				},
+				format_on_save = {
+					timeout_ms = 500,
+					lsp_fallback = true,
+				},
+			})
 		end,
 	},
 
