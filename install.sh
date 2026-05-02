@@ -34,8 +34,8 @@ PKGS=(
     wl-clipboard
 
     # Terminal & shell
-    kitty
-    zsh
+    alacritty
+    fish
     tmux
 
     # Editor
@@ -47,6 +47,7 @@ PKGS=(
     lazygit
     btop
     git
+    direnv
 
     # Dev — languages & runtimes
     nodejs
@@ -57,6 +58,7 @@ PKGS=(
     ollama
     docker
     docker-compose
+    tree-sitter-cli
 
     # Apps
     discord
@@ -78,13 +80,8 @@ sudo usermod -aG docker "$USER"
 sudo systemctl enable --now ollama
 
 # ── shell ─────────────────────────────────────────────────────────────────────
-section "Setting default shell to zsh"
-chsh -s "$(which zsh)"
-
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-    section "Installing oh-my-zsh"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-fi
+section "Setting default shell to fish"
+chsh -s "$(which fish)"
 
 # ── ai tools ──────────────────────────────────────────────────────────────────
 section "Installing Claude Code"
@@ -98,10 +95,10 @@ section "Symlinking dotfiles"
 
 mkdir -p \
     ~/.config/hypr \
-    ~/.config/kitty \
+    ~/.config/fish \
+    ~/.config/alacritty \
     ~/.config/mako \
-    ~/.config/waybar \
-    ~/.oh-my-zsh/custom/themes
+    ~/.config/waybar
 
 # hypr
 ln -sf "$DOTFILES/hypr/hyprland.conf"     ~/.config/hypr/hyprland.conf
@@ -109,9 +106,8 @@ ln -sf "$DOTFILES/hypr/hyprpaper.conf"    ~/.config/hypr/hyprpaper.conf
 ln -sf "$DOTFILES/hypr/hyprlauncher.conf" ~/.config/hypr/hyprlauncher.conf
 ln -sf "$DOTFILES/hypr/hyprtoolkit.conf"  ~/.config/hypr/hyprtoolkit.conf
 
-# kitty
-ln -sf "$DOTFILES/kitty/kitty.conf" ~/.config/kitty/kitty.conf
-ln -sf "$DOTFILES/kitty/miko.conf"  ~/.config/kitty/miko.conf
+# alacritty
+ln -sf "$DOTFILES/alacritty/alacritty.toml" ~/.config/alacritty/alacritty.toml
 
 # mako
 ln -sf "$DOTFILES/mako/config" ~/.config/mako/config
@@ -127,9 +123,8 @@ fi
 ln -sf "$DOTFILES/waybar/config.jsonc" ~/.config/waybar/config.jsonc
 ln -sf "$DOTFILES/waybar/style.css"    ~/.config/waybar/style.css
 
-# zsh
-ln -sf "$DOTFILES/zsh/.zshrc" ~/.zshrc
-ln -sf "$DOTFILES/zsh/miko.zsh-theme" ~/.oh-my-zsh/custom/themes/miko.zsh-theme
+# fish
+ln -sf "$DOTFILES/fish/config.fish" ~/.config/fish/config.fish
 
 # login pfp
 ln -sf "$DOTFILES/assets/pfp/miko.jpg" ~/.face

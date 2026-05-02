@@ -28,9 +28,9 @@ local c = {
 local hi = function(group, opts) vim.api.nvim_set_hl(0, group, opts) end
 
 -- Base
-hi("Normal",            { fg = c.fg,       bg = c.bg })
+hi("Normal",            { fg = c.fg })
 hi("NormalFloat",       { fg = c.fg,       bg = c.bg_dark })
-hi("NormalNC",          { fg = c.fg_dim,   bg = c.bg })
+hi("NormalNC",          { fg = c.fg_dim })
 hi("NormalSB",          { fg = c.fg_dim,   bg = c.bg_dark })
 hi("FloatBorder",       { fg = c.purple,   bg = c.bg_dark })
 hi("FloatTitle",        { fg = c.pink,     bg = c.bg_dark, bold = true })
@@ -42,7 +42,7 @@ hi("CursorLine",        { bg = c.bg_bar })
 hi("CursorLineNr",      { fg = c.pink,     bold = true })
 hi("CursorColumn",      { bg = c.bg_bar })
 hi("LineNr",            { fg = c.fg_gutter })
-hi("SignColumn",        { fg = c.fg_gutter, bg = c.bg })
+hi("SignColumn",        { fg = c.fg_gutter })
 
 -- Selection / search
 hi("Visual",            { bg = c.bg_vis })
