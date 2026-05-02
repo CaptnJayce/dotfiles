@@ -1,0 +1,40 @@
+[font]
+normal = { family = "CozetteVector Nerd Font", style = "Regular" }
+size = 16.0
+
+[window]
+opacity = 0.9
+decorations = "None"
+padding = { x = 4, y = 4 }
+
+[colors.primary]
+background = "#0f0f1a"
+foreground = "#e8e8e8"
+
+[colors.cursor]
+text   = "#0f0f1a"
+cursor = "#ffb7c5"
+
+[colors.selection]
+text       = "#e8e8e8"
+background = "#3d3d5c"
+
+[colors.normal]
+black   = "#0f0f1a"
+red     = "#dc143c"
+green   = "#57c47f"
+yellow  = "#e05780"
+blue    = "#9966cc"
+magenta = "#ffb7c5"
+cyan    = "#9090a8"
+white   = "#e8e8e8"
+
+[colors.bright]
+black   = "#3d3d5c"
+red     = "#efa0a7"
+green   = "#7fd4a0"
+yellow  = "#ffb7c5"
+blue    = "#b090e0"
+magenta = "#ffd0dd"
+cyan    = "#b0b0c8"
+white   = "#f0f0f0"
