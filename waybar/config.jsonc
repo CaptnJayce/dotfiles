@@ -64,7 +64,7 @@
     },
 
     "custom/salah": {
-        "exec": "$HOME/Projects/salah-bar/.venv/bin/python3 $HOME/Projects/salah-bar/salah_bar.py",
+        "exec": "$HOME/.local/share/salah-bar/salah_bar.py --lat 51.5074 --lon -0.1278 --method MuslimWorldLeague --asr Standard",
         "interval": 30,
         "return-type": "json"
     },

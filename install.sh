@@ -34,6 +34,7 @@ PKGS=(
     lazygit
     git
     direnv
+    python-requests
 
     # Dev — languages & runtimes
     nodejs
@@ -103,6 +104,15 @@ if [ -d ~/.config/nvim ] && [ ! -L ~/.config/nvim ]; then
     info "~/.config/nvim already exists as a real directory — skipping (move or delete it manually)"
 else
     ln -sfn "$DOTFILES/nvim" ~/.config/nvim
+fi
+
+# ── salah-bar ─────────────────────────────────────────────────────────────────
+section "Installing salah-bar"
+if [ ! -d ~/.local/share/salah-bar ]; then
+    git clone https://github.com/CaptnJayce/salah-bar ~/.local/share/salah-bar
+    chmod +x ~/.local/share/salah-bar/salah_bar.py
+else
+    info "salah-bar already installed — skipping"
 fi
 
 # ── done ──────────────────────────────────────────────────────────────────────
