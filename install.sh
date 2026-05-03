@@ -23,22 +23,7 @@ fi
 section "Installing packages"
 
 PKGS=(
-    # Hyprland ecosystem
-    hyprland
-    hyprpaper
-    hyprlauncher
-    hyprshot
-    xdg-desktop-portal-hyprland
-    mako
-    waybar
-    wl-clipboard
-    thunar
-    playerctl
-
-    # Terminal & shell
-    kitty
-    ttf-iosevkaterm-nerd
-    fish
+    # Terminal
     tmux
 
     # Editor
@@ -46,9 +31,7 @@ PKGS=(
 
     # CLI tools
     yazi
-    fastfetch
     lazygit
-    btop
     git
     direnv
 
@@ -56,8 +39,6 @@ PKGS=(
     nodejs
     npm
     bun
-    python
-    python-pip
     ollama
     docker
     docker-compose
