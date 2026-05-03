@@ -98,7 +98,8 @@ mkdir -p \
     ~/.config/fish \
     ~/.config/kitty \
     ~/.config/mako \
-    ~/.config/waybar
+    ~/.config/waybar \
+    ~/.config/fastfetch
 
 # hypr
 ln -sf "$DOTFILES/hypr/hyprland.conf"     ~/.config/hypr/hyprland.conf
@@ -126,6 +127,9 @@ ln -sf "$DOTFILES/waybar/style.css"    ~/.config/waybar/style.css
 
 # fish
 ln -sf "$DOTFILES/fish/config.fish" ~/.config/fish/config.fish
+
+# fastfetch
+ln -sf "$DOTFILES/fastfetch/config.jsonc" ~/.config/fastfetch/config.jsonc
 
 # login pfp
 ln -sf "$DOTFILES/assets/pfp/miko.jpg" ~/.face

@@ -1,0 +1,62 @@
+{
+    "logo": {
+        "source": "~/Projects/dotfiles/assets/miko_fastfetch.png",
+        "type": "kitty",
+        "width": 30,
+        "height": 14
+    },
+    "display": {
+        "separator": "  ",
+        "key": { "width": 10 },
+        "color": {
+            "keys": "38;2;255;183;197",
+            "separator": "38;2;153;102;204"
+        }
+    },
+    "modules": [
+        {
+            "type": "title",
+            "color": {
+                "user": "38;2;153;102;204",
+                "at": "38;2;144;144;168",
+                "host": "38;2;255;183;197"
+            }
+        },
+        "separator",
+        {
+            "type": "os",
+            "key": "OS"
+        },
+        {
+            "type": "kernel",
+            "key": "Kernel"
+        },
+        {
+            "type": "uptime",
+            "key": "Uptime"
+        },
+        {
+            "type": "packages",
+            "key": "Packages"
+        },
+        "break",
+        {
+            "type": "cpu",
+            "key": "CPU"
+        },
+        {
+            "type": "gpu",
+            "key": "GPU"
+        },
+        {
+            "type": "memory",
+            "key": "Memory"
+        },
+        {
+            "type": "disk",
+            "key": "Disk"
+        },
+        "break",
+        "colors"
+    ]
+}

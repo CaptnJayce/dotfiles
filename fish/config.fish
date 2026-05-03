@@ -5,6 +5,7 @@ end
 
 # Suppress fastfetch greeting from CachyOS config
 function fish_greeting
+    fastfetch
 end
 
 # PATH
