@@ -32,9 +32,12 @@ PKGS=(
     mako
     waybar
     wl-clipboard
+    thunar
+    playerctl
 
     # Terminal & shell
     kitty
+    ttf-iosevkaterm-nerd
     fish
     tmux
 
@@ -81,7 +84,7 @@ sudo systemctl enable --now ollama
 
 # ── shell ─────────────────────────────────────────────────────────────────────
 section "Setting default shell to fish"
-chsh -s "$(which fish)"
+chsh -s "$(command -v fish)"
 
 # ── ai tools ──────────────────────────────────────────────────────────────────
 section "Installing Claude Code"
@@ -101,18 +104,18 @@ mkdir -p \
     ~/.config/waybar \
     ~/.config/fastfetch
 
-# hypr
 ln -sf "$DOTFILES/hypr/hyprland.conf"     ~/.config/hypr/hyprland.conf
 ln -sf "$DOTFILES/hypr/hyprpaper.conf"    ~/.config/hypr/hyprpaper.conf
 ln -sf "$DOTFILES/hypr/hyprlauncher.conf" ~/.config/hypr/hyprlauncher.conf
 ln -sf "$DOTFILES/hypr/hyprtoolkit.conf"  ~/.config/hypr/hyprtoolkit.conf
-
-# kitty
-ln -sf "$DOTFILES/kitty/kitty.conf" ~/.config/kitty/kitty.conf
-ln -sf "$DOTFILES/kitty/miko.conf"  ~/.config/kitty/miko.conf
-
-# mako
-ln -sf "$DOTFILES/mako/config" ~/.config/mako/config
+ln -sf "$DOTFILES/kitty/kitty.conf"       ~/.config/kitty/kitty.conf
+ln -sf "$DOTFILES/kitty/miko.conf"        ~/.config/kitty/miko.conf
+ln -sf "$DOTFILES/mako/config"            ~/.config/mako/config
+ln -sf "$DOTFILES/waybar/config.jsonc"    ~/.config/waybar/config.jsonc
+ln -sf "$DOTFILES/waybar/style.css"       ~/.config/waybar/style.css
+ln -sf "$DOTFILES/fish/config.fish"       ~/.config/fish/config.fish
+ln -sf "$DOTFILES/fastfetch/config.jsonc" ~/.config/fastfetch/config.jsonc
+ln -sf "$DOTFILES/assets/pfp/miko.jpg"   ~/.face
 
 # nvim — symlink the whole directory
 if [ -d ~/.config/nvim ] && [ ! -L ~/.config/nvim ]; then
@@ -120,19 +123,6 @@ if [ -d ~/.config/nvim ] && [ ! -L ~/.config/nvim ]; then
 else
     ln -sfn "$DOTFILES/nvim" ~/.config/nvim
 fi
-
-# waybar
-ln -sf "$DOTFILES/waybar/config.jsonc" ~/.config/waybar/config.jsonc
-ln -sf "$DOTFILES/waybar/style.css"    ~/.config/waybar/style.css
-
-# fish
-ln -sf "$DOTFILES/fish/config.fish" ~/.config/fish/config.fish
-
-# fastfetch
-ln -sf "$DOTFILES/fastfetch/config.jsonc" ~/.config/fastfetch/config.jsonc
-
-# login pfp
-ln -sf "$DOTFILES/assets/pfp/miko.jpg" ~/.face
 
 # ── done ──────────────────────────────────────────────────────────────────────
 echo

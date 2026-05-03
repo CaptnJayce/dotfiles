@@ -64,7 +64,7 @@
     },
 
     "custom/salah": {
-        "exec": "/home/captnjayce/Projects/salah-bar/.venv/bin/python3 /home/captnjayce/Projects/salah-bar/salah_bar.py",
+        "exec": "$HOME/Projects/salah-bar/.venv/bin/python3 $HOME/Projects/salah-bar/salah_bar.py",
         "interval": 30,
         "return-type": "json"
     },
