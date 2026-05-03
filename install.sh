@@ -34,7 +34,7 @@ PKGS=(
     wl-clipboard
 
     # Terminal & shell
-    alacritty
+    kitty
     fish
     tmux
 
@@ -96,7 +96,7 @@ section "Symlinking dotfiles"
 mkdir -p \
     ~/.config/hypr \
     ~/.config/fish \
-    ~/.config/alacritty \
+    ~/.config/kitty \
     ~/.config/mako \
     ~/.config/waybar
 
@@ -106,8 +106,9 @@ ln -sf "$DOTFILES/hypr/hyprpaper.conf"    ~/.config/hypr/hyprpaper.conf
 ln -sf "$DOTFILES/hypr/hyprlauncher.conf" ~/.config/hypr/hyprlauncher.conf
 ln -sf "$DOTFILES/hypr/hyprtoolkit.conf"  ~/.config/hypr/hyprtoolkit.conf
 
-# alacritty
-ln -sf "$DOTFILES/alacritty/alacritty.toml" ~/.config/alacritty/alacritty.toml
+# kitty
+ln -sf "$DOTFILES/kitty/kitty.conf" ~/.config/kitty/kitty.conf
+ln -sf "$DOTFILES/kitty/miko.conf"  ~/.config/kitty/miko.conf
 
 # mako
 ln -sf "$DOTFILES/mako/config" ~/.config/mako/config
