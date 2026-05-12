@@ -84,7 +84,8 @@ mkdir -p \
     ~/.config/kitty \
     ~/.config/mako \
     ~/.config/waybar \
-    ~/.config/fastfetch
+    ~/.config/fastfetch \
+    ~/.vscode/extensions
 
 ln -sf "$DOTFILES/hypr/hyprland.conf"     ~/.config/hypr/hyprland.conf
 ln -sf "$DOTFILES/hypr/hyprpaper.conf"    ~/.config/hypr/hyprpaper.conf
@@ -104,6 +105,13 @@ if [ -d ~/.config/nvim ] && [ ! -L ~/.config/nvim ]; then
     info "~/.config/nvim already exists as a real directory — skipping (move or delete it manually)"
 else
     ln -sfn "$DOTFILES/nvim" ~/.config/nvim
+fi
+
+# VSCode — symlink the Miko theme extension
+if [ -d ~/.vscode/extensions/miko-theme ]; then
+    info "~/.vscode/extensions/miko-theme already exists — skipping"
+else
+    ln -sfn "$DOTFILES/vscode" ~/.vscode/extensions/miko-theme
 fi
 
 # ── salah-bar ─────────────────────────────────────────────────────────────────
