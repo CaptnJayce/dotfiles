@@ -20,3 +20,6 @@ alias gp='git push'
 if command -v direnv &>/dev/null
     direnv hook fish | source
 end
+
+# opencode
+fish_add_path /home/captnjayce/.opencode/bin
