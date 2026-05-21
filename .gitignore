@@ -2,3 +2,6 @@
 __pycache__/
 *.pyc
 *.vsix
+
+# Local assets — drop your own images in ~/Pictures/dots/
+assets/

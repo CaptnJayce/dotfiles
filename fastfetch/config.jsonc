@@ -1,9 +1,13 @@
 {
     "logo": {
-        "source": "~/Projects/dotfiles/assets/miko_fastfetch.png",
+        "source": "~/Pictures/dots/fastfetch.png",
         "type": "kitty",
-        "width": 30,
-        "height": 14
+        "width": 22,
+        "height": 14,
+        "preserveAspectRatio": true,
+        "padding": {
+            "right": 1
+        }
     },
     "display": {
         "separator": "  ",

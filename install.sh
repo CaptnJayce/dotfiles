@@ -86,7 +86,8 @@ mkdir -p \
     ~/.config/waybar \
     ~/.config/fastfetch \
     ~/.config/opencode/themes \
-    ~/.vscode/extensions
+    ~/.vscode/extensions \
+    ~/Pictures/dots
 
 ln -sf "$DOTFILES/hypr/hyprland.conf"     ~/.config/hypr/hyprland.conf
 ln -sf "$DOTFILES/hypr/hyprpaper.conf"    ~/.config/hypr/hyprpaper.conf
@@ -99,7 +100,7 @@ ln -sf "$DOTFILES/waybar/config.jsonc"    ~/.config/waybar/config.jsonc
 ln -sf "$DOTFILES/waybar/style.css"       ~/.config/waybar/style.css
 ln -sf "$DOTFILES/fish/config.fish"       ~/.config/fish/config.fish
 ln -sf "$DOTFILES/fastfetch/config.jsonc" ~/.config/fastfetch/config.jsonc
-ln -sf "$DOTFILES/assets/pfp/miko.jpg"          ~/.face
+ln -sf "$HOME/Pictures/dots/pfp.jpg"            ~/.face
 ln -sf "$DOTFILES/opencode/themes/miko.json"    ~/.config/opencode/themes/miko.json
 
 # nvim — symlink the whole directory
