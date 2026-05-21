@@ -90,7 +90,6 @@ mkdir -p \
     ~/Pictures/dots
 
 ln -sf "$DOTFILES/hypr/hyprland.conf"     ~/.config/hypr/hyprland.conf
-ln -sf "$DOTFILES/hypr/hyprpaper.conf"    ~/.config/hypr/hyprpaper.conf
 ln -sf "$DOTFILES/hypr/hyprlauncher.conf" ~/.config/hypr/hyprlauncher.conf
 ln -sf "$DOTFILES/hypr/hyprtoolkit.conf"  ~/.config/hypr/hyprtoolkit.conf
 ln -sf "$DOTFILES/kitty/kitty.conf"       ~/.config/kitty/kitty.conf

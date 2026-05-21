@@ -4,4 +4,3 @@ __pycache__/
 *.vsix
 
 # Local assets — drop your own images in ~/Pictures/dots/
-assets/
