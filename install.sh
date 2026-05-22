@@ -82,8 +82,7 @@ mkdir -p \
     ~/.config/waybar \
     ~/.config/fastfetch \
     ~/.config/opencode/themes \
-    ~/.vscode/extensions \
-    ~/Pictures/dots
+    ~/.vscode/extensions
 
 ln -sf "$DOTFILES/hypr/hyprland.conf"     ~/.config/hypr/hyprland.conf
 ln -sf "$DOTFILES/hypr/wallpaper.sh"     ~/.config/hypr/wallpaper.sh
@@ -96,7 +95,6 @@ ln -sf "$DOTFILES/waybar/config.jsonc"    ~/.config/waybar/config.jsonc
 ln -sf "$DOTFILES/waybar/style.css"       ~/.config/waybar/style.css
 ln -sf "$DOTFILES/fish/config.fish"       ~/.config/fish/config.fish
 ln -sf "$DOTFILES/fastfetch/config.jsonc" ~/.config/fastfetch/config.jsonc
-ln -sf "$HOME/Pictures/dots/pfp.png"            ~/.face
 ln -sf "$DOTFILES/opencode/themes/miko.json"    ~/.config/opencode/themes/miko.json
 
 # VSCode — symlink the Miko theme extension
@@ -118,6 +116,9 @@ fi
 # ── ly ────────────────────────────────────────────────────────────────────────
 section "Configuring Ly"
 if command -v ly &>/dev/null; then
+    sudo mkdir -p /etc/ly
+    sudo cp "$DOTFILES/ly/blackhole.dur" /etc/ly/blackhole.dur
+    sudo cp "$DOTFILES/ly/config.ini" /etc/ly/config.ini
     sudo systemctl enable ly
     if systemctl is-active --quiet sddm; then
         sudo systemctl disable --now sddm
