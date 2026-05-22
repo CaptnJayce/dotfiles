@@ -23,15 +23,11 @@ fi
 section "Installing packages"
 
 PKGS=(
-    # Terminal
-    tmux
-
     # Editor
     neovim
 
     # CLI tools
     yazi
-    lazygit
     git
     direnv
     python-requests
@@ -53,7 +49,7 @@ PKGS=(
 
     # ── Optional ──────────────────────────────────────────────────────────────
     mullvad-vpn
-    supabase-bin       # CLI you use in portfolio/quran projects
+    supabase-bin
 )
 
 yay -S --needed --noconfirm "${PKGS[@]}"
@@ -99,15 +95,8 @@ ln -sf "$DOTFILES/waybar/config.jsonc"    ~/.config/waybar/config.jsonc
 ln -sf "$DOTFILES/waybar/style.css"       ~/.config/waybar/style.css
 ln -sf "$DOTFILES/fish/config.fish"       ~/.config/fish/config.fish
 ln -sf "$DOTFILES/fastfetch/config.jsonc" ~/.config/fastfetch/config.jsonc
-ln -sf "$HOME/Pictures/dots/pfp.jpg"            ~/.face
+ln -sf "$HOME/Pictures/dots/pfp.png"            ~/.face
 ln -sf "$DOTFILES/opencode/themes/miko.json"    ~/.config/opencode/themes/miko.json
-
-# nvim — symlink the whole directory
-if [ -d ~/.config/nvim ] && [ ! -L ~/.config/nvim ]; then
-    info "~/.config/nvim already exists as a real directory — skipping (move or delete it manually)"
-else
-    ln -sfn "$DOTFILES/nvim" ~/.config/nvim
-fi
 
 # VSCode — symlink the Miko theme extension
 if [ -d ~/.vscode/extensions/miko-theme ]; then
@@ -123,6 +112,19 @@ if [ ! -d ~/.local/share/salah-bar ]; then
     chmod +x ~/.local/share/salah-bar/salah_bar.py
 else
     info "salah-bar already installed — skipping"
+fi
+
+# ── ly ────────────────────────────────────────────────────────────────────────
+section "Configuring Ly"
+if command -v ly &>/dev/null; then
+    sudo systemctl enable ly
+    if systemctl is-active --quiet sddm; then
+        sudo systemctl disable --now sddm
+        info "sddm disabled"
+    fi
+    info "ly enabled"
+else
+    info "ly not installed — skipping"
 fi
 
 # ── done ──────────────────────────────────────────────────────────────────────

@@ -22,4 +22,4 @@ if command -v direnv &>/dev/null
 end
 
 # opencode
-fish_add_path /home/captnjayce/.opencode/bin
+fish_add_path ~/.opencode/bin
