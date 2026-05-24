@@ -31,6 +31,7 @@ PKGS=(
     git
     direnv
     python-requests
+    hyprlock
 
     # Dev — languages & runtimes
     nodejs
@@ -88,6 +89,7 @@ ln -sf "$DOTFILES/hypr/hyprland.conf"     ~/.config/hypr/hyprland.conf
 ln -sf "$DOTFILES/hypr/wallpaper.sh"     ~/.config/hypr/wallpaper.sh
 ln -sf "$DOTFILES/hypr/hyprlauncher.conf" ~/.config/hypr/hyprlauncher.conf
 ln -sf "$DOTFILES/hypr/hyprtoolkit.conf"  ~/.config/hypr/hyprtoolkit.conf
+ln -sf "$DOTFILES/hypr/hyprlock.conf"     ~/.config/hypr/hyprlock.conf
 ln -sf "$DOTFILES/kitty/kitty.conf"       ~/.config/kitty/kitty.conf
 ln -sf "$DOTFILES/kitty/miko.conf"        ~/.config/kitty/miko.conf
 ln -sf "$DOTFILES/mako/config"            ~/.config/mako/config
