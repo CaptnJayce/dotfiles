@@ -6,11 +6,11 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 info()    { echo "  $1"; }
 section() { echo; echo "▸ $1"; }
 
-# ── system update ─────────────────────────────────────────────────────────────
+# System update
 section "Updating system"
 sudo pacman -Syu --noconfirm
 
-# ── yay ───────────────────────────────────────────────────────────────────────
+# yay
 if ! command -v yay &>/dev/null; then
     section "Installing yay"
     sudo pacman -S --needed --noconfirm git base-devel
@@ -19,7 +19,7 @@ if ! command -v yay &>/dev/null; then
     rm -rf /tmp/yay-install
 fi
 
-# ── packages ──────────────────────────────────────────────────────────────────
+# Packages
 section "Installing packages"
 
 PKGS=(
@@ -30,8 +30,10 @@ PKGS=(
     yazi
     git
     direnv
-    python-requests
     hyprlock
+    hyprshot
+    brightnessctl
+    playerctl
 
     # Dev — languages & runtimes
     nodejs
@@ -42,37 +44,42 @@ PKGS=(
     docker-compose
     tree-sitter-cli
 
+    # Wayland / Hyprland ecosystem
+    waybar
+    mako
+    mpvpaper
+
     # Apps
     discord
     visual-studio-code-bin
     obsidian
     firefox
 
-    # ── Optional ──────────────────────────────────────────────────────────────
+    # Optional
     mullvad-vpn
     supabase-bin
 )
 
 yay -S --needed --noconfirm "${PKGS[@]}"
 
-# ── services ──────────────────────────────────────────────────────────────────
+# Services
 section "Enabling services"
 sudo systemctl enable --now docker
 sudo usermod -aG docker "$USER"
 sudo systemctl enable --now ollama
 
-# ── shell ─────────────────────────────────────────────────────────────────────
+# Shell
 section "Setting default shell to fish"
 chsh -s "$(command -v fish)"
 
-# ── ai tools ──────────────────────────────────────────────────────────────────
+# AI tools
 section "Installing Claude Code"
 bun add -g @anthropic-ai/claude-code
 
 section "Installing opencode"
 bun add -g opencode-ai
 
-# ── dotfiles ──────────────────────────────────────────────────────────────────
+# Dotfiles
 section "Symlinking dotfiles"
 
 mkdir -p \
@@ -106,7 +113,7 @@ else
     ln -sfn "$DOTFILES/vscode" ~/.vscode/extensions/miko-theme
 fi
 
-# ── salah-bar ─────────────────────────────────────────────────────────────────
+# salah-bar
 section "Installing salah-bar"
 if [ ! -d ~/.local/share/salah-bar ]; then
     git clone https://github.com/CaptnJayce/salah-bar ~/.local/share/salah-bar
@@ -115,7 +122,7 @@ else
     info "salah-bar already installed — skipping"
 fi
 
-# ── ly ────────────────────────────────────────────────────────────────────────
+# Ly
 section "Configuring Ly"
 if command -v ly &>/dev/null; then
     sudo mkdir -p /etc/ly
@@ -131,6 +138,6 @@ else
     info "ly not installed — skipping"
 fi
 
-# ── done ──────────────────────────────────────────────────────────────────────
+# Done
 echo
 echo "Done. Log out and back in for shell + docker group changes to take effect."
