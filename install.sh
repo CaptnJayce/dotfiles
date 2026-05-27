@@ -30,6 +30,7 @@ PKGS=(
     yazi
     git
     direnv
+    stow
     hyprlock
     hyprshot
     brightnessctl
@@ -85,36 +86,17 @@ bun add -g opencode-ai
 
 # Dotfiles
 section "Symlinking dotfiles"
+cd "$DOTFILES"
 
-mkdir -p \
-    ~/.config/hypr \
-    ~/.config/fish \
-    ~/.config/kitty \
-    ~/.config/mako \
-    ~/.config/waybar \
-    ~/.config/fastfetch \
-    ~/.config/opencode/themes \
-    ~/.vscode/extensions
+mkdir -p ~/.config
+stow hypr fish kitty waybar mako fastfetch opencode
 
-ln -sf "$DOTFILES/hypr/hyprland.conf"     ~/.config/hypr/hyprland.conf
-ln -sf "$DOTFILES/hypr/wallpaper.sh"     ~/.config/hypr/wallpaper.sh
-ln -sf "$DOTFILES/hypr/hyprlauncher.conf" ~/.config/hypr/hyprlauncher.conf
-ln -sf "$DOTFILES/hypr/hyprtoolkit.conf"  ~/.config/hypr/hyprtoolkit.conf
-ln -sf "$DOTFILES/hypr/hyprlock.conf"     ~/.config/hypr/hyprlock.conf
-ln -sf "$DOTFILES/kitty/kitty.conf"       ~/.config/kitty/kitty.conf
-ln -sf "$DOTFILES/kitty/miko.conf"        ~/.config/kitty/miko.conf
-ln -sf "$DOTFILES/mako/config"            ~/.config/mako/config
-ln -sf "$DOTFILES/waybar/config.jsonc"    ~/.config/waybar/config.jsonc
-ln -sf "$DOTFILES/waybar/style.css"       ~/.config/waybar/style.css
-ln -sf "$DOTFILES/fish/config.fish"       ~/.config/fish/config.fish
-ln -sf "$DOTFILES/fastfetch/config.jsonc" ~/.config/fastfetch/config.jsonc
-ln -sf "$DOTFILES/opencode/themes/miko.json"    ~/.config/opencode/themes/miko.json
-
-# VSCode — symlink the Miko theme extension
-if [ -d ~/.vscode/extensions/miko-theme ]; then
-    info "~/.vscode/extensions/miko-theme already exists — skipping"
+# VSCode extension — manual symlink since ~/.vscode is typically a real directory
+mkdir -p ~/.vscode/extensions
+if [ -L ~/.vscode/extensions/miko-theme ] || [ -d ~/.vscode/extensions/miko-theme ]; then
+    info "miko-theme already exists — skipping"
 else
-    ln -sfn "$DOTFILES/vscode" ~/.vscode/extensions/miko-theme
+    ln -sfn "$DOTFILES/vscode/.vscode/extensions/miko-theme" ~/.vscode/extensions/miko-theme
 fi
 
 # salah-bar
