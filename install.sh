@@ -48,6 +48,10 @@ PKGS=(
     waybar
     mako
     mpvpaper
+    hyprlauncher
+
+    # Fonts
+    ttf-terminus-nerd
 
     # Apps
     discord
@@ -126,7 +130,6 @@ fi
 section "Configuring Ly"
 if command -v ly &>/dev/null; then
     sudo mkdir -p /etc/ly
-    sudo cp "$DOTFILES/ly/blackhole.dur" /etc/ly/blackhole.dur
     sudo cp "$DOTFILES/ly/config.ini" /etc/ly/config.ini
     sudo systemctl enable ly
     if systemctl is-active --quiet sddm; then
