@@ -13,6 +13,7 @@ The colour scheme is called **Miko**, named after Yae Miko. The palette is built
 | Selection     | `#2D2D44` |
 | Accent purple | `#9966CC` |
 | Accent pink   | `#FFB7C5` |
+| Accent red    | `#DC143C` |
 | Text          | `#E8E8E8` |
 | Muted text    | `#9090A8` |
 
