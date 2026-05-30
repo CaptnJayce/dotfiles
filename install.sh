@@ -88,7 +88,23 @@ bun add -g opencode-ai
 section "Symlinking dotfiles"
 cd "$DOTFILES"
 
+backup_conflicts() {
+    local pkg="$1"
+    [ -d "$pkg" ] || return
+    find "$pkg" -type f | while read -r src; do
+        local rel="${src#$pkg/}"
+        local target="$HOME/$rel"
+        if [ -f "$target" ] && [ ! -L "$target" ]; then
+            mv "$target" "$target.backup"
+            info "Backed up existing $target"
+        fi
+    done
+}
+
 mkdir -p ~/.config
+for pkg in hypr fish kitty waybar mako fastfetch opencode; do
+    backup_conflicts "$pkg"
+done
 stow -t ~ hypr fish kitty waybar mako fastfetch opencode
 
 # VSCode extension — manual symlink since ~/.vscode is typically a real directory

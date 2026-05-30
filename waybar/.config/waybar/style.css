@@ -1,6 +1,6 @@
 * {
-  font-family: CozetteVector, "Noto Sans Symbols 2", monospace;
-  font-size: 15px;
+  font-family: "MesloLGM Nerd Font Mono", "Terminess Nerd Font Mono", "Noto Sans Symbols 2", monospace;
+  font-size: 11px;
   border: none;
   border-radius: 0;
   min-height: 0;
@@ -16,29 +16,29 @@ window#waybar {
 }
 
 .modules-left {
-  padding: 0 4px 0 6px;
+  padding: 0 2px 0 4px;
 }
 .modules-center {
-  padding: 0 8px;
+  padding: 0 4px;
 }
 .modules-right {
-  padding: 0 6px 0 4px;
+  padding: 0 4px 0 2px;
 }
 
 /* ── Workspaces ─────────────────────────────────────── */
 
 #workspaces {
-  margin: 0 4px 0 0;
+  margin: 0 2px 0 0;
 }
 
 #workspaces button {
-  padding: 2px 0;
-  margin: 5px 2px;
-  min-width: 28px;
+  padding: 1px 0;
+  margin: 2px 2px;
+  min-width: 20px;
   color: #9090a8;
   background: transparent;
   border: 1px solid transparent;
-  border-radius: 6px;
+  border-radius: 4px;
   transition:
     background 0.15s ease,
     color 0.15s ease;
@@ -68,7 +68,7 @@ window#waybar {
 
 #window {
   color: #9090a8;
-  padding: 0 10px;
+  padding: 0 6px;
   font-style: italic;
 }
 
@@ -76,7 +76,7 @@ window#waybar {
 
 #clock {
   color: #e8e8e8;
-  padding: 0 14px;
+  padding: 0 8px;
   letter-spacing: 0.5px;
 }
 
@@ -86,15 +86,21 @@ window#waybar {
 #memory,
 #network,
 #custom-salah,
-#pulseaudio {
+#pulseaudio,
+#backlight,
+#battery,
+#bluetooth {
   color: #9090a8;
-  padding: 0 10px;
+  padding: 0 6px;
   transition: color 0.15s ease;
 }
 
 #cpu:hover,
 #memory:hover,
-#network:hover {
+#network:hover,
+#backlight:hover,
+#battery:hover,
+#bluetooth:hover {
   color: #b090e0;
 }
 
@@ -106,10 +112,22 @@ window#waybar {
   color: #ffb7c5;
 }
 
+#battery.warning {
+  color: #ff9966;
+}
+
+#battery.critical {
+  color: #dc143c;
+}
+
+#bluetooth.off {
+  color: #3d3d5c;
+}
+
 /* ── Tray ───────────────────────────────────────────── */
 
 #tray {
-  padding: 0 6px;
+  padding: 0 4px;
 }
 
 #tray > .passive {

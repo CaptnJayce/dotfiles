@@ -6,7 +6,7 @@ function fish_greeting
     fastfetch
 end
 
-fish_add_path ~/.local/bin ~/.bun/bin ~/.opencode/bin
+fish_add_path ~/.local/bin ~/.cache/.bun/bin
 
 alias ls='ls --color=auto'
 alias kys='sudo shutdown now'
