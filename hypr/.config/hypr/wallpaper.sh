@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# this is vibe-coded as fuck please don't yell at me if its bad (i wanted something quick)
+
 WALLPAPER_DIR="${WALLPAPER_DIR:-$HOME/Pictures/wallpapers}"
 STATE_DIR="$HOME/.local/share/miko-wallpaper"
 STATE_FILE="$STATE_DIR/state"
