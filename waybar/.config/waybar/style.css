@@ -87,9 +87,7 @@ window#waybar {
 #network,
 #custom-salah,
 #pulseaudio,
-#backlight,
-#battery,
-#bluetooth {
+#battery {
   color: #9090a8;
   padding: 0 6px;
   transition: color 0.15s ease;
@@ -98,9 +96,7 @@ window#waybar {
 #cpu:hover,
 #memory:hover,
 #network:hover,
-#backlight:hover,
-#battery:hover,
-#bluetooth:hover {
+#battery:hover {
   color: #b090e0;
 }
 
@@ -118,10 +114,6 @@ window#waybar {
 
 #battery.critical {
   color: #dc143c;
-}
-
-#bluetooth.off {
-  color: #3d3d5c;
 }
 
 /* ── Tray ───────────────────────────────────────────── */

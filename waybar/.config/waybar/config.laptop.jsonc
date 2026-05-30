@@ -9,7 +9,7 @@
 
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/salah", "pulseaudio", "bluetooth", "network", "cpu", "memory", "backlight", "battery", "tray"],
+    "modules-right": ["custom/salah", "pulseaudio", "network", "cpu", "memory", "battery", "tray"],
 
     "hyprland/workspaces": {
         "format": "{id}",
@@ -63,15 +63,8 @@
         "tooltip": false
     },
 
-    "backlight": {
-        "format": "{icon} {percent}%",
-        "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
-        "on-scroll-up": "brightnessctl set +2%",
-        "on-scroll-down": "brightnessctl set 2%-",
-        "scroll-step": 2
-    },
-
     "battery": {
+        "bat": "BAT1",
         "states": {
             "warning": 30,
             "critical": 15
@@ -81,16 +74,6 @@
         "format-plugged": "󰚥 {capacity}%",
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         "tooltip-format": "{timeTo} · {power}W"
-    },
-
-    "bluetooth": {
-        "format": "󰂯",
-        "format-connected": "󰂯 {num_connections}",
-        "format-off": "󰂲",
-        "on-click": "kitty bluetoothctl",
-        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
     },
 
     "custom/salah": {
