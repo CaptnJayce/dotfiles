@@ -48,7 +48,7 @@ PKGS=(
     # Wayland / Hyprland ecosystem
     waybar
     mako
-    mpvpaper
+    swaybg
     hyprlauncher
 
     # Fonts
@@ -106,6 +106,14 @@ for pkg in hypr fish kitty waybar mako fastfetch opencode; do
     backup_conflicts "$pkg"
 done
 stow -t ~ hypr fish kitty waybar mako fastfetch opencode
+
+# Wallpapers
+mkdir -p ~/Pictures
+if [ -L ~/Pictures/wallpapers ] || [ -d ~/Pictures/wallpapers ]; then
+    info "~/Pictures/wallpapers already exists — skipping"
+else
+    ln -sfn "$DOTFILES/wallpapers" ~/Pictures/wallpapers
+fi
 
 # VSCode extension — manual symlink since ~/.vscode is typically a real directory
 mkdir -p ~/.vscode/extensions
