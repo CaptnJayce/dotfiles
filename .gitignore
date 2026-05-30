@@ -4,3 +4,7 @@ __pycache__/
 *.vsix
 
 # Local assets — images go in ~/Pictures/dots/
+
+# Generated configs
+fish/fish_variables
+opencode/opencode.jsonc

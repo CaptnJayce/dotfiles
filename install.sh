@@ -89,7 +89,7 @@ section "Symlinking dotfiles"
 cd "$DOTFILES"
 
 mkdir -p ~/.config
-stow hypr fish kitty waybar mako fastfetch opencode
+stow -t ~ hypr fish kitty waybar mako fastfetch opencode
 
 # VSCode extension — manual symlink since ~/.vscode is typically a real directory
 mkdir -p ~/.vscode/extensions
