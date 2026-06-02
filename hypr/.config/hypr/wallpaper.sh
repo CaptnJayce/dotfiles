@@ -9,7 +9,7 @@ STATE_FILE="$STATE_DIR/state"
 
 # Resolve the dotfiles repo root from this script's real path
 SCRIPT_REAL="$(readlink -f "${BASH_SOURCE[0]}")"
-REPO_ROOT="$(cd "$(dirname "$SCRIPT_REAL")/../../../.." && pwd)"
+REPO_ROOT="$(cd "$(dirname "$SCRIPT_REAL")/../../.." && pwd)"
 DEFAULT_WALLPAPER="$REPO_ROOT/wallpapers/miko.png"
 
 mkdir -p "$STATE_DIR"
@@ -35,6 +35,9 @@ write_state() {
 }
 
 get_wallpapers() {
+    if [ ! -d "$WALLPAPER_DIR" ]; then
+        return 0
+    fi
     find "$WALLPAPER_DIR" -maxdepth 1 -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.webp' \) 2>/dev/null | sort
 }
 

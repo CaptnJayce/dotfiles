@@ -2,6 +2,8 @@
 
 These are my dotfiles. I use them on Arch Linux with Hyprland.
 
+They're currently mainly vibecoded for POC and ease of tinkering. I'll manually re-implement everything once I've gotten them to a favourably stage.
+
 ## The theme
 
 The colour scheme is called **Miko**, named after Yae Miko. The palette is built around her aesthetic: Purple and Sakura Pink against a deep midnight background with red highlights.
