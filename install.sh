@@ -137,11 +137,14 @@ section "Configuring Ly"
 if command -v ly &>/dev/null; then
     sudo mkdir -p /etc/ly
     sudo cp "$DOTFILES/ly/config.ini" /etc/ly/config.ini
-    sudo systemctl enable ly
-    if systemctl is-active --quiet sddm; then
+
+    # Ensure no competing display manager is running or enabled
+    if systemctl is-active --quiet sddm 2>/dev/null || systemctl is-enabled --quiet sddm 2>/dev/null; then
         sudo systemctl disable --now sddm
         info "sddm disabled"
     fi
+
+    sudo systemctl enable ly
     info "ly enabled"
 else
     info "ly not installed — skipping"
