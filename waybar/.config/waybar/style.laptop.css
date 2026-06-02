@@ -1,6 +1,6 @@
 * {
   font-family: "Terminess Nerd Font Mono", "Noto Sans Symbols 2", monospace;
-  font-size: 11px;
+  font-size: 13px;
   border: none;
   border-radius: 0;
   min-height: 0;
@@ -69,7 +69,6 @@ window#waybar {
 #window {
   color: #9090a8;
   padding: 0 6px;
-  font-style: italic;
 }
 
 /* ── Clock ──────────────────────────────────────────── */
