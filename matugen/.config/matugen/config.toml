@@ -1,0 +1,37 @@
+[config]
+fallback_color = "#E030A0"
+prefer = "saturation"
+mode = "dark"
+scheme_type = "scheme-tonal-spot"
+
+[templates.hypr-colors]
+input_path = "~/.config/matugen/templates/hypr-colors.conf"
+output_path = "~/.config/hypr/colors.conf"
+post_hook = "hyprctl reload || true"
+
+[templates.hyprtoolkit]
+input_path = "~/.config/matugen/templates/hyprtoolkit.conf"
+output_path = "~/.config/hypr/hyprtoolkit.conf"
+
+[templates.kitty]
+input_path = "~/.config/matugen/templates/kitty.conf"
+output_path = "~/.config/kitty/themes/Matugen.conf"
+post_hook = "kitty +kitten themes --reload-in=all Matugen || true"
+
+[templates.waybar]
+input_path = "~/.config/matugen/templates/waybar.css"
+output_path = "~/.config/waybar/colors.css"
+post_hook = "pkill -SIGUSR2 waybar || true"
+
+[templates.mako]
+input_path = "~/.config/matugen/templates/mako.conf"
+output_path = "~/.config/mako/mako-colors"
+post_hook = "makoctl reload || true"
+
+[templates.fastfetch]
+input_path = "~/.config/matugen/templates/fastfetch.jsonc"
+output_path = "~/.config/fastfetch/config.jsonc"
+
+[templates.opencode]
+input_path = "~/.config/matugen/templates/opencode.json"
+output_path = "~/.config/opencode/themes/matugen.json"

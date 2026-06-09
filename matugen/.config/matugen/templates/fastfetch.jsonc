@@ -6,17 +6,17 @@
         "separator": "  ",
         "key": { "width": 10 },
         "color": {
-            "keys": "38;2;255;183;197",
-            "separator": "38;2;153;102;204"
+            "keys": "{{colors.primary.default.hex}}",
+            "separator": "{{colors.secondary.default.hex}}"
         }
     },
     "modules": [
         {
             "type": "title",
             "color": {
-                "user": "38;2;153;102;204",
-                "at": "38;2;144;144;168",
-                "host": "38;2;255;183;197"
+                "user": "{{colors.secondary.default.hex}}",
+                "at": "{{colors.on_surface_variant.default.hex}}",
+                "host": "{{colors.primary.default.hex}}"
             }
         },
         "separator",

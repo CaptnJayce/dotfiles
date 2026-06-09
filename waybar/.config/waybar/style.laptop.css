@@ -1,3 +1,5 @@
+@import "colors.css";
+
 * {
   font-family: "Terminess Nerd Font Mono", "Noto Sans Symbols 2", monospace;
   font-size: 13px;
@@ -9,10 +11,10 @@
 }
 
 window#waybar {
-  background: rgba(15, 15, 26, 0.9);
-  color: #e8e8e8;
+  background: @background_90;
+  color: @on_surface;
   border-radius: 0;
-  border: 1px solid rgba(45, 45, 68, 0.9);
+  border: 1px solid @outline_90;
 }
 
 .modules-left {
@@ -35,7 +37,7 @@ window#waybar {
   padding: 1px 0;
   margin: 2px 2px;
   min-width: 20px;
-  color: #9090a8;
+  color: @on_surface;
   background: transparent;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -45,36 +47,32 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  background: rgba(153, 102, 204, 0.15);
-  color: #b090e0;
+  background: @primary_15;
+  color: @secondary;
 }
 
 #workspaces button.active {
-  background: linear-gradient(
-    45deg,
-    rgba(153, 102, 204, 0.35),
-    rgba(255, 183, 197, 0.35)
-  );
-  color: #ffb7c5;
-  border-color: rgba(255, 183, 197, 0.3);
+  background: @primary_20;
+  color: @on_surface;
+  border-color: @primary_30;
 }
 
 #workspaces button.urgent {
-  background: rgba(220, 20, 60, 0.25);
-  color: #ef9a9a;
+  background: @error_25;
+  color: @on_surface;
 }
 
 /* ── Window title ───────────────────────────────────── */
 
 #window {
-  color: #9090a8;
+  color: @on_surface;
   padding: 0 6px;
 }
 
 /* ── Clock ──────────────────────────────────────────── */
 
 #clock {
-  color: #e8e8e8;
+  color: @on_surface;
   padding: 0 8px;
   letter-spacing: 0.5px;
 }
@@ -87,7 +85,7 @@ window#waybar {
 #custom-salah,
 #pulseaudio,
 #battery {
-  color: #9090a8;
+  color: @on_surface;
   padding: 0 6px;
   transition: color 0.15s ease;
 }
@@ -96,23 +94,23 @@ window#waybar {
 #memory:hover,
 #network:hover,
 #battery:hover {
-  color: #b090e0;
+  color: @secondary;
 }
 
 #pulseaudio.muted {
-  color: #3d3d5c;
+  color: @surface_container_highest;
 }
 
 #pulseaudio:hover {
-  color: #ffb7c5;
+  color: @primary;
 }
 
 #battery.warning {
-  color: #ff9966;
+  color: @tertiary;
 }
 
 #battery.critical {
-  color: #dc143c;
+  color: @error;
 }
 
 /* ── Tray ───────────────────────────────────────────── */
@@ -127,15 +125,15 @@ window#waybar {
 
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
-  background: rgba(220, 20, 60, 0.2);
+  background: @error_20;
   border-radius: 4px;
 }
 
 /* ── Tooltip ────────────────────────────────────────── */
 
 tooltip {
-  background: #0f0f1a;
-  border: 1px solid #2d2d44;
+  background: @background;
+  border: 1px solid @surface_container;
   border-radius: 8px;
-  color: #e8e8e8;
+  color: @on_surface;
 }

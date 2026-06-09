@@ -6,20 +6,9 @@ They're currently mainly vibecoded for POC and ease of tinkering. I'll manually 
 
 ## The theme
 
-The colour scheme is called **Miko**, named after Yae Miko. The palette is built around her aesthetic: Purple and Sakura Pink against a deep midnight background with red highlights.
+Colours are generated dynamically with [matugen](https://github.com/InioX/matugen) from the current wallpaper using Google's Material You algorithm. Switching wallpapers (Super+[/]) regenerates the palette and hot-reloads everything that supports it.
 
-| Role          | Hex       |
-| ------------- | --------- |
-| Background    | `#0F0F1A` |
-| Base          | `#151524` |
-| Selection     | `#2D2D44` |
-| Accent purple | `#9966CC` |
-| Accent pink   | `#FFB7C5` |
-| Accent red    | `#DC143C` |
-| Text          | `#E8E8E8` |
-| Muted text    | `#9090A8` |
-
-Every tool uses the same hex codes with no compromise, if it doesn't yet - it will eventually.
+There is no hardcoded palette — the theme adapts to whatever wallpaper is set.
 
 ## What's in here
 
@@ -40,5 +29,5 @@ Every tool uses the same hex codes with no compromise, if it doesn't yet - it wi
 ## Also
 
 - **salah-bar** shows prayer times in Waybar. Hardcoded to London coordinates. Change the lat/lon in the Waybar config if you live elsewhere.
-- **hyprtoolkit** forces the Miko palette on Qt apps that respect it.
+- **hyprtoolkit** forces the generated Material You palette on Qt apps that respect it.
 - Screenshots are bound to Print / Alt+Print / Shift+Print for output / window / region. They go to `~/Pictures/hyprshot/`.

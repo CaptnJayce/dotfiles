@@ -4,13 +4,13 @@ set -euo pipefail
 # this is vibe-coded as fuck please don't yell at me if its bad (i wanted something quick)
 
 WALLPAPER_DIR="${WALLPAPER_DIR:-$HOME/Pictures/wallpapers}"
-STATE_DIR="$HOME/.local/share/miko-wallpaper"
+STATE_DIR="$HOME/.local/share/wallpaper-state"
 STATE_FILE="$STATE_DIR/state"
 
 # Resolve the dotfiles repo root from this script's real path
 SCRIPT_REAL="$(readlink -f "${BASH_SOURCE[0]}")"
 REPO_ROOT="$(cd "$(dirname "$SCRIPT_REAL")/../../.." && pwd)"
-DEFAULT_WALLPAPER="$REPO_ROOT/wallpapers/miko.png"
+DEFAULT_WALLPAPER="$REPO_ROOT/wallpapers/makima.png"
 
 mkdir -p "$STATE_DIR"
 
@@ -69,6 +69,11 @@ launch_wallpaper() {
     fi
 
     nohup swaybg -i "$target" -m fill >/dev/null 2>&1 &
+
+    # Regenerate Material You colors from the new wallpaper
+    if command -v matugen &>/dev/null; then
+        matugen image "$target" >/dev/null 2>&1 || true
+    fi
 }
 
 # ── commands ──────────────────────────────────────────

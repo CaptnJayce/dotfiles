@@ -1,2 +1,7 @@
 default-timeout=2000
 ignore-timeout=0
+
+border-size=1
+border-radius=8
+
+include=~/.config/mako/mako-colors
