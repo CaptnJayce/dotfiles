@@ -115,14 +115,6 @@ else
     ln -sfn "$DOTFILES/wallpapers" ~/Pictures/wallpapers
 fi
 
-# VSCode extension — manual symlink since ~/.vscode is typically a real directory
-mkdir -p ~/.vscode/extensions
-if [ -L ~/.vscode/extensions/miko-theme ] || [ -d ~/.vscode/extensions/miko-theme ]; then
-    info "miko-theme already exists — skipping"
-else
-    ln -sfn "$DOTFILES/vscode/.vscode/extensions/miko-theme" ~/.vscode/extensions/miko-theme
-fi
-
 # salah-bar
 section "Installing salah-bar"
 if [ ! -d ~/.local/share/salah-bar ]; then
