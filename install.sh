@@ -57,7 +57,7 @@ PKGS=(
 
     # Apps
     discord
-    visual-studio-code-bin
+    lazygit
     obsidian
     firefox
 
