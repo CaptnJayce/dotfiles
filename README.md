@@ -6,9 +6,7 @@ They're currently mainly vibecoded for POC and ease of tinkering. I'll manually 
 
 ## The theme
 
-Colours are generated dynamically with [matugen](https://github.com/InioX/matugen) from the current wallpaper using Google's Material You algorithm. Switching wallpapers (Super+[/]) regenerates the palette and hot-reloads everything that supports it.
-
-There is no hardcoded palette — the theme adapts to whatever wallpaper is set.
+Colours are generated dynamically with [matugen](https://github.com/InioX/matugen) from the current wallpaper using Google's Material You algorithm. Switching wallpapers regenerates the palette and hot-reloads everything that supports it.
 
 ## What's in here
 
@@ -22,7 +20,7 @@ There is no hardcoded palette — the theme adapts to whatever wallpaper is set.
 | Shell          | Fish         |
 | Launcher       | Hyprlauncher |
 | System info    | Fastfetch    |
-| Code Editor    | VSCode       |
+| Code Editor    | Neovim       |
 | Login manager  | Ly           |
 | Wallpaper      | mpvpaper     |
 

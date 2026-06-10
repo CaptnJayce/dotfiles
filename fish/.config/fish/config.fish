@@ -6,6 +6,9 @@ function fish_greeting
     fastfetch
 end
 
+set -x EDITOR nvim
+set -x VISUAL nvim
+
 fish_add_path ~/.local/bin ~/.bun/bin ~/.cache/.bun/bin
 
 alias ls='ls --color=auto'
