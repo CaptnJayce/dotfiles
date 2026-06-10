@@ -53,7 +53,7 @@ PKGS=(
     matugen
 
     # Fonts
-    ttf-terminus-nerd
+    ttf-roboto-mono-nerd
 
     # Apps
     discord

@@ -1,7 +1,7 @@
 @import "colors.css";
 
 * {
-  font-family: "Terminess Nerd Font Mono", "Noto Sans Symbols 2", monospace;
+  font-family: "RobotoMono Nerd Font", "Noto Sans Symbols 2", monospace;
   font-size: 15px;
   border: none;
   border-radius: 0;
