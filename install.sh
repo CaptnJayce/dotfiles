@@ -103,10 +103,10 @@ backup_conflicts() {
 }
 
 mkdir -p ~/.config
-for pkg in hypr fish kitty waybar mako opencode matugen; do
+for pkg in hypr fish kitty waybar mako matugen; do
     backup_conflicts "$pkg"
 done
-stow -t ~ hypr fish kitty waybar mako opencode matugen
+stow -t ~ hypr fish kitty waybar mako matugen
 
 # Wallpapers
 mkdir -p ~/Pictures
