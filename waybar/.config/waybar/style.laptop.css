@@ -11,10 +11,9 @@
 }
 
 window#waybar {
-  background: @background_90;
+  background: @background;
   color: @on_surface;
   border-radius: 0;
-  border: 1px solid @outline_90;
 }
 
 .modules-left {

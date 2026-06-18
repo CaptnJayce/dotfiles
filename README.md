@@ -6,7 +6,7 @@ They're currently mainly vibecoded for POC and ease of tinkering. I'll manually 
 
 ## The theme
 
-Colours are generated dynamically with [matugen](https://github.com/InioX/matugen) from the current wallpaper using Google's Material You algorithm. Switching wallpapers regenerates the palette and hot-reloads everything that supports it.
+Monochrome — black, white, and the occasional grey. No dynamic generation, no wallpaper-derived palettes.
 
 ## What's in here
 
@@ -27,5 +27,4 @@ Colours are generated dynamically with [matugen](https://github.com/InioX/matuge
 ## Also
 
 - **salah-bar** shows prayer times in Waybar. Hardcoded to London coordinates. Change the lat/lon in the Waybar config if you live elsewhere.
-- **hyprtoolkit** forces the generated Material You palette on Qt apps that respect it.
 - Screenshots are bound to Print / Alt+Print / Shift+Print for output / window / region. They go to `~/Pictures/hyprshot/`.

@@ -50,7 +50,6 @@ PKGS=(
     mako
     swaybg
     hyprlauncher
-    matugen
 
     # Fonts
     ttf-roboto-mono-nerd
@@ -103,10 +102,10 @@ backup_conflicts() {
 }
 
 mkdir -p ~/.config
-for pkg in hypr fish kitty waybar mako matugen; do
+for pkg in hypr fish kitty waybar mako fastfetch opencode; do
     backup_conflicts "$pkg"
 done
-stow -t ~ hypr fish kitty waybar mako matugen
+stow -t ~ hypr fish kitty waybar mako fastfetch opencode
 
 # Wallpapers
 mkdir -p ~/Pictures
@@ -141,14 +140,6 @@ if command -v ly &>/dev/null; then
     info "ly enabled"
 else
     info "ly not installed — skipping"
-fi
-
-# Generate initial Material You colors from default wallpaper
-section "Generating initial colour scheme"
-if command -v matugen &>/dev/null; then
-    matugen image "$DOTFILES/wallpapers/makima.png" >/dev/null 2>&1 || info "matugen generation skipped (no display or wallpaper issues)"
-else
-    info "matugen not installed — skipping colour generation"
 fi
 
 # Done

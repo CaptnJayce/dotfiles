@@ -69,11 +69,6 @@ launch_wallpaper() {
     fi
 
     nohup swaybg -i "$target" -m fill >/dev/null 2>&1 &
-
-    # Regenerate Material You colors from the new wallpaper
-    if command -v matugen &>/dev/null; then
-        matugen image "$target" >/dev/null 2>&1 || true
-    fi
 }
 
 # ── commands ──────────────────────────────────────────
