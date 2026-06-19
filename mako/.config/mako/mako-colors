@@ -1,18 +1,18 @@
-# Monochrome colors
+# Abyss · Obsidian · Chalk · Ember
 
 background-color=#0a0a0a
 text-color=#ffffff
-border-color=#333333
-progress-color=#ffffff
+border-color=#222222
+progress-color=#ff6b6b
 
 [urgency=low]
 background-color=#0a0a0a
-border-color=#333333
+border-color=#222222
 
 [urgency=normal]
 background-color=#0a0a0a
-border-color=#333333
+border-color=#222222
 
 [urgency=high]
 background-color=#0a0a0a
-border-color=#ffffff
+border-color=#ff6b6b

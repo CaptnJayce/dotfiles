@@ -1,10 +1,10 @@
 /*
- * Waybar colors — monochrome
+ * Waybar colors — Abyss · Obsidian · Chalk · Ember
  * GTK CSS @define-color directives
  */
 
-@define-color background #000000;
-@define-color surface #0a0a0a;
+@define-color background #0a0a0a;
+@define-color surface #111111;
 @define-color surface_container_lowest #0a0a0a;
 @define-color surface_container_low #111111;
 @define-color surface_container #1a1a1a;
@@ -12,24 +12,24 @@
 @define-color surface_container_highest #2a2a2a;
 @define-color on_surface #ffffff;
 @define-color on_surface_variant #999999;
-@define-color primary #ffffff;
-@define-color on_primary #000000;
-@define-color secondary #cccccc;
-@define-color on_secondary #000000;
+@define-color primary #ff6b6b;
+@define-color on_primary #0a0a0a;
+@define-color secondary #ff9999;
+@define-color on_secondary #0a0a0a;
 @define-color tertiary #888888;
-@define-color on_tertiary #000000;
-@define-color error #ffffff;
-@define-color on_error #000000;
-@define-color outline #444444;
-@define-color outline_variant #333333;
+@define-color on_tertiary #0a0a0a;
+@define-color error #ff4444;
+@define-color on_error #ffffff;
+@define-color outline #333333;
+@define-color outline_variant #222222;
 @define-color shadow #000000;
 
 /* Opacity variants for waybar */
-@define-color primary_15 rgba(255, 255, 255, 0.15);
-@define-color primary_20 rgba(255, 255, 255, 0.20);
-@define-color primary_30 rgba(255, 255, 255, 0.30);
-@define-color error_20 rgba(255, 255, 255, 0.20);
-@define-color error_25 rgba(255, 255, 255, 0.25);
-@define-color surface_90 rgba(10, 10, 10, 0.90);
-@define-color background_90 rgba(0, 0, 0, 0.90);
-@define-color outline_90 rgba(51, 51, 51, 0.90);
+@define-color primary_15 rgba(255, 107, 107, 0.15);
+@define-color primary_20 rgba(255, 107, 107, 0.20);
+@define-color primary_30 rgba(255, 107, 107, 0.30);
+@define-color error_20 rgba(255, 68, 68, 0.20);
+@define-color error_25 rgba(255, 68, 68, 0.25);
+@define-color surface_90 rgba(17, 17, 17, 0.90);
+@define-color background_90 rgba(10, 10, 10, 0.90);
+@define-color outline_90 rgba(34, 34, 34, 0.90);

@@ -6,17 +6,17 @@
         "separator": "  ",
         "key": { "width": 10 },
         "color": {
-            "keys": "#ffffff",
-            "separator": "#cccccc"
+            "keys": "#ff6b6b",
+            "separator": "#ff9999"
         }
     },
     "modules": [
         {
             "type": "title",
             "color": {
-                "user": "#cccccc",
+                "user": "#ff9999",
                 "at": "#999999",
-                "host": "#ffffff"
+                "host": "#ff6b6b"
             }
         },
         "separator",
