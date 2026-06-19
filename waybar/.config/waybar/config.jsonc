@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "left",
-    "width": 140,
+    "width": 55,
     "margin-left": 0,
     "margin-top": 0,
     "margin-bottom": 0,
@@ -40,11 +40,12 @@
     },
 
     "network": {
-        "format-ethernet": "{ipaddr}",
-        "format-wifi": "{essid} {signalStrength}%",
-        "format-disconnected": "offline",
+        "format-ethernet": "{ifname}",
+        "format-wifi": "{essid}",
+        "format-disconnected": "X",
         "tooltip-format-ethernet": "{ifname}  {ipaddr}/{cidr}",
-        "tooltip-format-wifi": "{ifname}  {ipaddr}  {signalStrength}%"
+        "tooltip-format-wifi": "{ifname}  {ipaddr}  {signalStrength}%",
+        "max-length": 8
     },
 
     "pulseaudio": {
@@ -60,7 +61,8 @@
     "custom/salah": {
         "exec": "$HOME/.local/share/salah-bar/salah_bar.py --lat 51.5074 --lon -0.1278 --method MuslimWorldLeague --asr Standard",
         "interval": 30,
-        "return-type": "json"
+        "return-type": "json",
+        "max-length": 8
     },
 
     "tray": {
