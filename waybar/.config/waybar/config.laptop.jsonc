@@ -1,11 +1,13 @@
 {
     "layer": "top",
     "position": "left",
+    "reload_style_on_change": true,
     "width": 55,
     "margin-left": 0,
     "margin-top": 0,
     "margin-bottom": 0,
     "spacing": 0,
+    "gtk-layer-shell": true,
 
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
@@ -74,7 +76,8 @@
         "exec": "$HOME/.local/share/salah-bar/salah_bar.py --lat 51.5074 --lon -0.1278 --method MuslimWorldLeague --asr Standard",
         "interval": 30,
         "return-type": "json",
-        "max-length": 8
+        "format": "󰖙",
+        "tooltip": true
     },
 
     "tray": {
