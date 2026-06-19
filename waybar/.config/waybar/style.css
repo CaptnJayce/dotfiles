@@ -11,49 +11,40 @@
 }
 
 window#waybar {
-  background-color: alpha(@background, 0.7);
+  background-color: @background;
   padding: 0;
   margin: 0;
   border: 0px solid @primary;
   border-radius: 0px;
 }
 
-/* ── Module pills ───────────────────────────────────── */
-
-#workspaces,
+#workspaces button,
 #clock,
-#cpu,
-#memory,
 #network,
 #pulseaudio,
 #custom-salah,
 #tray {
-  padding: 8px 2px;
-  background-color: rgba(255, 255, 255, 0.07);
+  min-width: 24px;
+  min-height: 24px;
+  padding: 4px;
+  margin: 4px 3px;
+
+  background-color: @surface_container;
   border: 0px;
   border-radius: 6px;
-  margin: 4px 6px;
 }
-
-/* ── Accent colour on module text ───────────────────── */
 
 #clock,
 #pulseaudio,
 #network,
-#cpu,
-#memory,
 #custom-salah {
   color: @primary;
 }
-
-/* ── Pulseaudio muted ───────────────────────────────── */
 
 #pulseaudio.muted {
   color: @background;
   background-color: @primary;
 }
-
-/* ── Workspaces ─────────────────────────────────────── */
 
 #workspaces {
   background: transparent;
@@ -66,34 +57,25 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 1px 1px;
-  margin: 1px 1px;
-  border-radius: 6px;
   color: @primary;
-  background-color: @surface;
-  transition: all 0.3s ease-in-out;
   opacity: 0.5;
+  transition: none;
 }
 
 #workspaces button:hover {
   background-color: @surface;
   border-radius: 6px;
-  min-height: 40px;
 }
 
 #workspaces button.active {
-  padding: 1px 1px;
-  margin: 1px 1px;
-  border-radius: 6px;
-  background-color: @background;
-  transition: all 0.3s ease-in-out;
+  color: @on_primary;
+  background-color: @primary;
   opacity: 1;
+  transition: none;
 }
 
-/* ── Tray ───────────────────────────────────────────── */
-
 #tray {
-  padding: 4px 2px;
+  padding: 4px;
 }
 
 #tray > .passive {
@@ -105,8 +87,6 @@ window#waybar {
   background: @error_20;
   border-radius: 4px;
 }
-
-/* ── Tooltip ────────────────────────────────────────── */
 
 tooltip {
   background: @background;
