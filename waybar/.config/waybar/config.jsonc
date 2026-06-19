@@ -1,13 +1,13 @@
 {
     "layer": "top",
-    "position": "top",
-    "height": 32,
-    "margin-top": 0,
+    "position": "left",
+    "width": 140,
     "margin-left": 0,
-    "margin-right": 0,
+    "margin-top": 0,
+    "margin-bottom": 0,
     "spacing": 0,
 
-    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["custom/salah", "pulseaudio", "network", "cpu", "memory", "tray"],
 
@@ -18,14 +18,8 @@
         "sort-by-number": true
     },
 
-    "hyprland/window": {
-        "max-length": 60,
-        "separate-outputs": true,
-        "format": "  {title}"
-    },
-
     "clock": {
-        "format": "{:%H:%M   %a %d %b}",
+        "format": "{:%H:%M}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "month",
