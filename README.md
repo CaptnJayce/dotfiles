@@ -2,11 +2,11 @@
 
 These are my dotfiles. I use them on Arch Linux with Hyprland.
 
-They're currently mainly vibecoded for POC and ease of tinkering. I'll manually re-implement everything once I've gotten them to a favourably stage.
+They're currently mainly vibecoded for POC and ease of tinkering. I'll manually re-implement everything once I've gotten them to a favourable stage.
 
 ## The theme
 
-Monochrome — black, white, and the occasional grey. No dynamic generation, no wallpaper-derived palettes.
+Monochrome with red accents.
 
 ## What's in here
 
