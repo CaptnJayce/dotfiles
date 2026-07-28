@@ -11,6 +11,11 @@ end
 set -x EDITOR nvim
 set -x VISUAL nvim
 
+set -gx DEVKITPRO /opt/devkitpro
+set -gx DEVKITARM $DEVKITPRO/devkitARM
+set -gx DEVKITPPC $DEVKITPRO/devkitPPC
+set -gx PATH $DEVKITPRO/tools/bin $DEVKITARM/bin $PATH
+
 fish_add_path ~/.local/bin ~/.bun/bin ~/.cache/.bun/bin
 
 alias ls='ls --color=auto'
